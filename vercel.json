@@ -6,6 +6,6 @@
     }
   },
   "rewrites": [
-    { "source": "/((?!static|favicon|manifest|robots|logo|apple-touch).*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
