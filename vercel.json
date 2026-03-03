@@ -1,4 +1,10 @@
 {
+  "build": {
+    "env": {
+      "REACT_APP_SUPABASE_URL": "$SUPABASE_URL",
+      "REACT_APP_SUPABASE_ANON_KEY": "$SUPABASE_ANON_KEY"
+    }
+  },
   "rewrites": [
     { "source": "/((?!static|favicon|manifest|robots|logo|apple-touch).*)", "destination": "/index.html" }
   ]
