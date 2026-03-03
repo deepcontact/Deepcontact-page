@@ -40,6 +40,12 @@
       "last 1 safari version"
     ]
   },
+  "overrides": {
+    "react-helmet-async": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0"
+    }
+  },
   "devDependencies": {
     "sharp": "^0.34.5"
   }
