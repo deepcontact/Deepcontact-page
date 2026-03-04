@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "echo REACT_APP_SUPABASE_URL=$SUPABASE_URL > .env.production.local && echo REACT_APP_SUPABASE_ANON_KEY=$SUPABASE_ANON_KEY >> .env.production.local",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
