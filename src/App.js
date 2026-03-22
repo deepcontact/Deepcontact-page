@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import HowItWorks from './pages/HowItWorks';
+import Login from './pages/Login';
 import './App.css';
 
 function ScrollToTop() {
@@ -18,22 +19,34 @@ function ScrollToTop() {
   return null;
 }
 
+function AppLayout() {
+  const { pathname } = useLocation();
+  const isLoginPage = pathname === '/login';
+
+  return (
+    <>
+      <ScrollToTop />
+      {!isLoginPage && <Header />}
+      <main className={isLoginPage ? '' : 'page-content'}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contacto" element={<Contact />} />
+          <Route path="/como-funciona" element={<HowItWorks />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </main>
+      {!isLoginPage && <Footer />}
+    </>
+  );
+}
+
 function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
         <LanguageProvider>
-          <ScrollToTop />
-          <Header />
-          <main className="page-content">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contacto" element={<Contact />} />
-              <Route path="/como-funciona" element={<HowItWorks />} />
-            </Routes>
-          </main>
-          <Footer />
+          <AppLayout />
         </LanguageProvider>
       </BrowserRouter>
     </HelmetProvider>
