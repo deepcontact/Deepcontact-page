@@ -69,6 +69,15 @@ function Header() {
               </NavLink>
             </li>
           </ul>
+          <a
+            href="https://deepcontact.com.ar/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline-light btn-sm me-3"
+            onClick={closeMenu}
+          >
+            Login
+          </a>
           <div className="lang-dropdown" ref={dropdownRef}>
             <button
               className="lang-toggle"
