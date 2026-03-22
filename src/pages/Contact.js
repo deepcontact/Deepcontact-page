@@ -196,7 +196,14 @@ function Contact() {
                 <div className="d-flex align-items-start mb-3">
                   <span className="contact-icon me-3">📞</span>
                   <div>
-                    <div className="fw-semibold">{t('contact.phoneInfo')}</div>
+                    <a
+                      href="https://wa.me/5491164090482"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="fw-semibold text-decoration-none text-dark"
+                    >
+                      {t('contact.phoneInfo')}
+                    </a>
                   </div>
                 </div>
                 <div className="d-flex align-items-start mb-3">
