@@ -74,6 +74,7 @@ function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="lang-toggle me-2 text-decoration-none"
+            style={{ lineHeight: '24px' }}
             onClick={closeMenu}
           >
             <span className="lang-code">Login</span>
