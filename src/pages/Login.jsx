@@ -14,16 +14,13 @@ const getIP = async () => {
 };
 
 const logSession = async ({ userId, success, ip }) => {
-  try {
-    await supabase.from('sessions_log').insert({
-      user_id:    userId || null,
-      event_type: success ? 'login_success' : 'login_failed',
-      success,
-      ip_address: ip,
-    });
-  } catch {
-    // silencioso, no interrumpir el flujo
-  }
+  const { error } = await supabase.from('sessions_log').insert({
+    user_id:    userId || null,
+    event_type: success ? 'login_success' : 'login_failed',
+    success,
+    ip_address: ip,
+  });
+  if (error) console.error('sessions_log error:', error);
 };
 
 export default function Login() {
