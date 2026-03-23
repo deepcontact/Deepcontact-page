@@ -1,5 +1,3 @@
-import Ico from "./Ico";
-
 export default function Btn({ children, variant = "primary", icon, loading, size = "md", ...props }) {
   const base = {
     display: "inline-flex", alignItems: "center", justifyContent: "center",

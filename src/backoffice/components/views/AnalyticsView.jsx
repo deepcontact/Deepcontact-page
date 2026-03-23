@@ -83,6 +83,7 @@ const today         = () => new Date().toISOString().split("T")[0];
 const thirtyDaysAgo = () => new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
 
 // Tooltip personalizado para los gráficos
+// eslint-disable-next-line no-unused-vars
 function CustomTooltip({ active, payload, label, formatter }) {
   if (!active || !payload?.length) return null;
   return (
@@ -132,6 +133,7 @@ export default function AnalyticsView({ campaigns, activeTab = "dashboard" }) {
     setLoading(false);
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { load(); }, []);
 
   const applyFilters = () => { setPage(1); load(filters, 1); };

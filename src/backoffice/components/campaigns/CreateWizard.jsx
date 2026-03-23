@@ -60,6 +60,7 @@ export default function CreateWizard({ open, onClose, agents, onSave, onDraftSav
   // Asegurar que el step sea válido si cambia la cantidad de pasos
   useEffect(() => {
     if (step >= STEPS.length) setStep(STEPS.length - 1);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form.retriesEnabled]);
 
   const [downloadingTemplate, setDownloadingTemplate] = useState(false);
@@ -109,6 +110,7 @@ export default function CreateWizard({ open, onClose, agents, onSave, onDraftSav
     if (form.schedule.callsPerMinute > maxSpeed) {
       setForm((f) => ({ ...f, schedule: { ...f.schedule, callsPerMinute: maxSpeed } }));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [maxSpeed]);
 
   const downloadTemplate = async () => {
@@ -127,7 +129,7 @@ export default function CreateWizard({ open, onClose, agents, onSave, onDraftSav
       a.href = url; a.download = `modelo_contactos_${(agent_name || form.agentId).replace(/\s+/g, "_")}.csv`;
       a.click(); URL.revokeObjectURL(url);
     } catch {
-      const blob = new Blob(["\uFEFF" + "telefono,nombre\n+5491112345678,Juan García"], { type: "text/csv;charset=utf-8;" });
+      const blob = new Blob(["\uFEFFtelefono,nombre\n+5491112345678,Juan García"], { type: "text/csv;charset=utf-8;" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url; a.download = "modelo_contactos.csv"; a.click(); URL.revokeObjectURL(url);

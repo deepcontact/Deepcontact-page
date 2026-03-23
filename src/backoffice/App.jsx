@@ -153,6 +153,7 @@ export default function App() {
     loadCampaigns();
     loadLocalAgents();
     loadWorkspaces();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Auto-refresh de campañas cada 15 segundos
@@ -161,6 +162,7 @@ export default function App() {
       loadCampaigns(true);
     }, 120_000);
     return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const tabs = [

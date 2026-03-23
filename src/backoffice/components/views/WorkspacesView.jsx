@@ -99,6 +99,7 @@ function WorkspaceCard({ ws, onUpdated }) {
     setAgentSaving(false);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const handleAddAgent = async () => {
     if (!agentToAdd || assignedAgentIds.includes(agentToAdd)) return;
     const newIds = [...assignedAgentIds, agentToAdd];
