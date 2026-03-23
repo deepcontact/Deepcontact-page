@@ -4,7 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
+import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact';
 import HowItWorks from './pages/HowItWorks.jsx';
