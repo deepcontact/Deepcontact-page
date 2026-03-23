@@ -9,6 +9,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import HowItWorks from './pages/HowItWorks';
 import Login from './pages/Login';
+import Backoffice from './backoffice/App';
 import './App.css';
 
 function ScrollToTop() {
@@ -21,7 +22,7 @@ function ScrollToTop() {
 
 function AppLayout() {
   const { pathname } = useLocation();
-  const isLoginPage = pathname === '/login';
+  const isLoginPage = pathname === '/login' || pathname.startsWith('/backoffice');
 
   return (
     <>
@@ -34,6 +35,7 @@ function AppLayout() {
           <Route path="/contacto" element={<Contact />} />
           <Route path="/como-funciona" element={<HowItWorks />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/backoffice/*" element={<Backoffice />} />
         </Routes>
       </main>
       {!isLoginPage && <Footer />}
