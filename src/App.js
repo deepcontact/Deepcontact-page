@@ -8,6 +8,7 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact';
 import HowItWorks from './pages/HowItWorks.jsx';
+import Pricing from './pages/Pricing.jsx';
 import Login from './pages/Login.jsx';
 import Backoffice from './backoffice/App';
 import './App.css';
@@ -34,6 +35,7 @@ function AppLayout() {
           <Route path="/about" element={<About />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/como-funciona" element={<HowItWorks />} />
+          <Route path="/precios" element={<Pricing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/backoffice/*" element={<Backoffice />} />
         </Routes>

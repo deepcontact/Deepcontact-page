@@ -64,6 +64,11 @@ function Header() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link px-3" to="/precios" onClick={closeMenu}>
+                {t('nav.pricing')}
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link px-3" to="/contacto" onClick={closeMenu}>
                 {t('nav.contact')}
               </NavLink>

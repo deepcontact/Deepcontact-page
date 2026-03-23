@@ -25,6 +25,7 @@ function Footer() {
             <ul className="list-unstyled footer-links">
               <li><NavLink to="/">{t('nav.home')}</NavLink></li>
               <li><NavLink to="/about">{t('nav.about')}</NavLink></li>
+              <li><NavLink to="/precios">{t('nav.pricing')}</NavLink></li>
               <li><NavLink to="/contacto">{t('nav.contact')}</NavLink></li>
             </ul>
           </div>
