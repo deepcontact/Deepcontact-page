@@ -20,11 +20,11 @@ export default function Login() {
       .select('*')
       .eq('email', email)
       .eq('password', password)
-      .single();
+      .limit(1);
 
     setLoading(false);
 
-    if (dbError || !data) {
+    if (dbError || !data || data.length === 0) {
       setError('Email o contraseña incorrectos.');
       return;
     }
