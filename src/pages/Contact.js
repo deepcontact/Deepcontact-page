@@ -190,7 +190,7 @@ function Contact() {
                   <span className="contact-icon me-3">📧</span>
                   <div>
                     <div className="fw-semibold">{t('contact.emailLabel')}</div>
-                    <div className="text-muted">{t('contact.emailInfo')}</div>
+                    <a href={`mailto:${t('contact.emailInfo')}`} className="text-muted text-decoration-none">{t('contact.emailInfo')}</a>
                   </div>
                 </div>
                 <div className="d-flex align-items-start mb-3">

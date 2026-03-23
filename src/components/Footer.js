@@ -33,7 +33,7 @@ function Footer() {
           <div className="col-lg-4">
             <h6 className="fw-bold mb-3">{t('footer.contactTitle')}</h6>
             <ul className="list-unstyled footer-text">
-              <li className="mb-2">📧 {t('contact.emailInfo')}</li>
+              <li className="mb-2">📧 <a href={`mailto:${t('contact.emailInfo')}`} className="text-decoration-none footer-text">{t('contact.emailInfo')}</a></li>
               <li className="mb-2">📞 <a href="https://wa.me/5491164090482" target="_blank" rel="noopener noreferrer" className="text-decoration-none footer-text">{t('contact.phoneInfo')}</a></li>
             </ul>
           </div>
