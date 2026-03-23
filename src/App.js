@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact';
-import HowItWorks from './pages/HowItWorks';
+import HowItWorks from './pages/HowItWorks.jsx';
 import Login from './pages/Login.jsx';
 import Backoffice from './backoffice/App';
 import './App.css';
