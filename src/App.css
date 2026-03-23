@@ -617,6 +617,29 @@ body {
   }
 }
 
+/* Step animations */
+.step-animate .step-slide {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.step-animate .step-slide-left {
+  transform: translateX(-40px);
+}
+
+.step-animate .step-slide-right {
+  transform: translateX(40px);
+}
+
+.step-animate.step-visible .step-slide {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.step-animate.step-visible .step-slide-right {
+  transition-delay: 0.15s;
+}
+
 /* Login Page */
 .login-page {
   margin-top: -56px;

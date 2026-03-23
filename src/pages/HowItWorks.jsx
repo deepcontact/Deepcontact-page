@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const CAPACITY_STATS = [
@@ -10,19 +11,37 @@ const CAPACITY_STATS = [
 
 const WE_DO_KEYS = ['howPage.weDo1', 'howPage.weDo2', 'howPage.weDo3', 'howPage.weDo4'];
 
+function useInView(threshold = 0.15) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { threshold }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [threshold]);
+  return { ref, visible };
+}
+
 function StepSection({ number, titleKey, subtitleKey, textKey, details, reverse, bg }) {
   const { t } = useLanguage();
+  const { ref, visible } = useInView();
   return (
     <section className={`py-5 ${bg ? 'bg-light' : ''}`}>
       <div className="container">
-        <div className={`row align-items-center g-5 ${reverse ? 'flex-row-reverse' : ''}`}>
-          <div className="col-lg-6">
+        <div
+          ref={ref}
+          className={`row align-items-center g-5 ${reverse ? 'flex-row-reverse' : ''} step-animate ${visible ? 'step-visible' : ''}`}
+        >
+          <div className={`col-lg-6 step-slide ${reverse ? 'step-slide-right' : 'step-slide-left'}`}>
             <div className="step-number mb-3">{number}</div>
             <h2 className="fw-bold mb-2">{t(titleKey)}</h2>
             <p className="text-muted fs-5 mb-3">{t(subtitleKey)}</p>
             <p className="text-muted">{t(textKey)}</p>
           </div>
-          <div className="col-lg-6">
+          <div className={`col-lg-6 step-slide ${reverse ? 'step-slide-left' : 'step-slide-right'}`}>
             <ul className="how-details-list">
               {details.map((d) => <li key={d}>{t(d)}</li>)}
             </ul>
