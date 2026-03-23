@@ -15,7 +15,7 @@ const RESULT_COLORS = {
   unknown:      "#94a3b8",
 };
 const RESULT_LABELS = {
-  successful:   "Exitosas",
+  successful:   "Respondidas",
   unsuccessful: "No exitosas",
   unknown:      "Sin datos",
 };
@@ -195,7 +195,7 @@ export default function AnalyticsView({ campaigns, activeTab = "dashboard" }) {
               onChange={(e) => setFilters((f) => ({ ...f, result: e.target.value }))}
               style={{ ...inputStyle, minWidth: 130 }}>
               <option value="">Todos</option>
-              <option value="successful">Exitosas</option>
+              <option value="successful">Respondidas</option>
               <option value="unsuccessful">No exitosas</option>
               <option value="unknown">Sin datos</option>
             </select>
@@ -217,9 +217,9 @@ export default function AnalyticsView({ campaigns, activeTab = "dashboard" }) {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 14, marginBottom: 22 }}>
         {[
           { label: "Total llamadas",     value: loading ? "…" : (kpis.total_calls ?? 0),                                     color: "#1e40af", bg: "#eff6ff", icon: "phone" },
-          { label: "Contestadas",        value: loading ? "…" : `${kpis.answered ?? 0} (${kpis.answer_rate ?? 0}%)`,         color: "#059669", bg: "#ecfdf5", icon: "check" },
-          { label: "Exitosas",           value: loading ? "…" : `${kpis.successful ?? 0} (${kpis.success_rate ?? 0}%)`,      color: "#7c3aed", bg: "#f5f3ff", icon: "check" },
-          { label: "Sin contestar",      value: loading ? "…" : `${kpis.no_answer ?? 0} (${kpis.no_answer_rate ?? 0}%)`,    color: "#ef4444", bg: "#fef2f2", icon: "x" },
+          { label: "Ejecutadas",          value: loading ? "…" : `${kpis.answered ?? 0} (${kpis.answer_rate ?? 0}%)`,         color: "#059669", bg: "#ecfdf5", icon: "check" },
+          { label: "Respondidas",        value: loading ? "…" : `${kpis.successful ?? 0} (${kpis.success_rate ?? 0}%)`,      color: "#7c3aed", bg: "#f5f3ff", icon: "check" },
+          { label: "Sin respuesta",      value: loading ? "…" : `${kpis.no_answer ?? 0} (${kpis.no_answer_rate ?? 0}%)`,    color: "#ef4444", bg: "#fef2f2", icon: "x" },
           { label: "Buzón de voz",       value: loading ? "…" : `${kpis.voicemail ?? 0} (${kpis.voicemail_rate ?? 0}%)`,    color: "#f59e0b", bg: "#fffbeb", icon: "clock" },
           { label: "Duración promedio",  value: loading ? "…" : fmtDuration((kpis.avg_duration_seconds ?? 0) * 1000),        color: "#0891b2", bg: "#ecfeff", icon: "clock" },
         ].map((k) => (
@@ -250,7 +250,7 @@ export default function AnalyticsView({ campaigns, activeTab = "dashboard" }) {
                 <YAxis tick={{ fontSize: 10, fill: "#94a3b8" }} allowDecimals={false} />
                 <Tooltip
                   contentStyle={{ fontSize: 12, fontFamily: "'DM Sans', sans-serif", borderRadius: 7, border: "1px solid #e2e8f0" }}
-                  formatter={(v, n) => [v, n === "total" ? "Total" : "Exitosas"]}
+                  formatter={(v, n) => [v, n === "total" ? "Total" : "Respondidas"]}
                   labelFormatter={(l) => `Día: ${l}`}
                 />
                 <Line type="monotone" dataKey="total"      stroke="#3b82f6" strokeWidth={2} dot={false} name="total" />
@@ -259,7 +259,7 @@ export default function AnalyticsView({ campaigns, activeTab = "dashboard" }) {
             </ResponsiveContainer>
           )}
           <div style={{ display: "flex", gap: 16, marginTop: 10 }}>
-            {[{ color: "#3b82f6", label: "Total" }, { color: "#10b981", label: "Exitosas" }].map((l) => (
+            {[{ color: "#3b82f6", label: "Total" }, { color: "#10b981", label: "Respondidas" }].map((l) => (
               <div key={l.label} style={{ display: "flex", alignItems: "center", gap: 5 }}>
                 <div style={{ width: 14, height: 2, background: l.color, borderRadius: 1 }} />
                 <span style={{ fontSize: 11, color: "#64748b" }}>{l.label}</span>
