@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import HowItWorks from './pages/HowItWorks';
-import Login from './pages/Login';
+import Login from './pages/Login.jsx';
 import Backoffice from './backoffice/App';
 import './App.css';
 

@@ -619,6 +619,7 @@ body {
 
 /* Login Page */
 .login-page {
+  margin-top: -56px;
   min-height: 100vh;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   display: flex;
@@ -706,5 +707,17 @@ body {
 
 .login-btn:hover {
   opacity: 0.88;
+}
+
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-error {
+  font-size: 0.85rem;
+  color: #dc2626;
+  text-align: center;
+  margin: 0;
 }
 

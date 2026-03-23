@@ -1,14 +1,35 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { supabase } from '../lib/supabase';
 import logo from '../assets/images/favicon-32x32.png';
 
-function Login() {
+export default function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: handle authentication
+    setError('');
+    setLoading(true);
+
+    const { data, error: dbError } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('email', email)
+      .eq('password', password)
+      .single();
+
+    setLoading(false);
+
+    if (dbError || !data) {
+      setError('Email o contraseña incorrectos.');
+      return;
+    }
+
+    navigate('/backoffice');
   };
 
   return (
@@ -46,13 +67,13 @@ function Login() {
             />
           </div>
 
-          <button type="submit" className="login-btn">
-            Ingresar
+          {error && <p className="login-error">{error}</p>}
+
+          <button type="submit" className="login-btn" disabled={loading}>
+            {loading ? 'Ingresando...' : 'Ingresar'}
           </button>
         </form>
       </div>
     </div>
   );
 }
-
-export default Login;
