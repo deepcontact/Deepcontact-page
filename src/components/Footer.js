@@ -35,7 +35,6 @@ function Footer() {
             <ul className="list-unstyled footer-text">
               <li className="mb-2">📧 {t('contact.emailInfo')}</li>
               <li className="mb-2">📞 <a href="https://wa.me/5491164090482" target="_blank" rel="noopener noreferrer" className="text-decoration-none footer-text">{t('contact.phoneInfo')}</a></li>
-              <li>📍 {t('contact.locationInfo')}</li>
             </ul>
           </div>
         </div>
