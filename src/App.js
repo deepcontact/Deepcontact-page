@@ -5,7 +5,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import About from './pages/About';
+import About from './pages/About.jsx';
 import Contact from './pages/Contact';
 import HowItWorks from './pages/HowItWorks';
 import Login from './pages/Login.jsx';

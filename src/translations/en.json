@@ -1,7 +1,7 @@
 {
   "seo": {
     "home": {
-      "title": "DeepContact | AI Customer Service",
+      "title": "DeepContact",
       "description": "AI-powered intelligent voicebot to transform customer service. Instant responses, 24/7 availability, natural language conversations."
     },
     "about": {
@@ -25,7 +25,7 @@
     "contact": "Contact"
   },
   "home": {
-    "heroTitle": "Intelligent Customer Service with AI",
+    "heroTitle": "Customer Service with AI",
     "heroSubtitle": "DeepContact is an AI-powered voicebot that transforms the customer service experience. Instant responses, 24/7 availability, and natural conversations.",
     "heroCta": "Get Started",
     "heroSecondaryCta": "Watch Demo",
@@ -54,24 +54,20 @@
   },
   "about": {
     "heroTitle": "About DeepContact",
-    "heroSubtitle": "We are the bridge between artificial intelligence and human customer service.",
+    "heroSubtitle": "We automate contact and collections with AI so you can reach more clients with less effort.",
     "missionTitle": "Our Mission",
-    "missionText": "At DeepContact we believe every customer deserves fast, accurate, and personalized service. Our mission is to democratize access to conversational AI technology so businesses of any size can deliver a world-class support experience.",
+    "missionText": "Optimize client contact through AI that acts immediately, persistently, and in a personalized way.",
     "visionTitle": "Our Vision",
-    "visionText": "To be the leading intelligent voicebot platform in Latin America, transforming the way companies communicate with their customers through natural AI-powered conversations.",
-    "storyTitle": "Our Story",
-    "storyText": "DeepContact was born from frustration with traditional customer service systems: long waits, robotic menus, and generic answers. Our team of engineers and AI specialists set out to build something better: a voicebot that truly understands and resolves.",
+    "visionText": "To become the leading automation platform in Latin America, replacing traditional call center models and manual management.",
     "valuesTitle": "Our Values",
-    "value1Title": "Innovation",
-    "value1Desc": "We are constantly evolving, incorporating the latest advances in natural language processing and machine learning.",
-    "value2Title": "Empathy",
-    "value2Desc": "Technology should bring people closer, not push them apart. We design every interaction with the human experience in mind.",
-    "value3Title": "Transparency",
-    "value3Desc": "We believe in clarity. Our clients always know how our AI works and how their data is used.",
-    "value4Title": "Excellence",
-    "value4Desc": "We don't settle for good enough. We strive to exceed expectations in every interaction and every line of code.",
+    "value1Title": "Smart Persistence",
+    "value1Desc": "We insist better, not more. Every contact is optimized.",
+    "value2Title": "Real Automation",
+    "value2Desc": "We replace human processes, we don't just dress them up.",
+    "value3Title": "Extreme Efficiency",
+    "value3Desc": "We reduce operational costs while increasing results.",
     "teamTitle": "Our Team",
-    "teamSubtitle": "A multidisciplinary team passionate about AI and customer experience.",
+    "teamSubtitle": "A multidisciplinary team focused on technology, product and customer experience.",
     "member1Name": "Santiago Collinet",
     "member1Role": "Chief Sales Officer (CSO)",
     "member2Name": "Tobias Maidana",

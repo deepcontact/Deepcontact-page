@@ -1,7 +1,7 @@
 {
   "seo": {
     "home": {
-      "title": "DeepContact | Atencion al Cliente con IA",
+      "title": "DeepContact",
       "description": "Voicebot inteligente impulsado por IA para optimizar la atencion al cliente. Respuestas inmediatas, disponibilidad 24/7 y analisis con estadisticas personalizadas."
     },
     "about": {
@@ -25,7 +25,7 @@
     "contact": "Contacto"
   },
   "home": {
-    "heroTitle": "Atencion al Cliente Inteligente con IA",
+    "heroTitle": "Atencion al Cliente con IA",
     "heroSubtitle": "DeepContact es una solucion de voicebot basada en inteligencia artificial que optimiza la experiencia de atencion al cliente mediante respuestas inmediatas, disponibilidad 24/7 y conversaciones naturales.",
     "heroCta": "Comenzar ahora",
     "heroSecondaryCta": "Ver demo",
@@ -54,22 +54,18 @@
   },
   "about": {
     "heroTitle": "Sobre DeepContact",
-    "heroSubtitle": "Conectamos la inteligencia artificial con experiencias de atencion al cliente de alto nivel.",
+    "heroSubtitle": "Automatizamos el contacto y la cobranza con IA para que llegues a mas clientes con menos esfuerzo.",
     "missionTitle": "Nuestra Mision",
-    "missionText": "En DeepContact impulsamos una atencion al cliente eficiente, precisa y personalizada. Nuestra mision es acercar la tecnologia de IA conversacional a empresas de todos los tamaños, permitiendo mejorar la experiencia del cliente y tomar decisiones basadas en estadisticas personalizadas.",
+    "missionText": "Optimizar el contacto con clientes mediante IA que actua de forma inmediata, persistente y personalizada.",
     "visionTitle": "Nuestra Vision",
-    "visionText": "Ser la plataforma lider en soluciones de voicebots inteligentes en Latinoamerica, redefiniendo la comunicacion entre empresas y clientes mediante tecnologia avanzada.",
-    "storyTitle": "Nuestra Historia",
-    "storyText": "DeepContact surge como respuesta a las limitaciones de los sistemas tradicionales de atencion al cliente: procesos lentos, interacciones poco eficientes y falta de informacion accionable. Nuestro equipo desarrollo una solucion capaz de comprender, resolver y medir cada interaccion.",
+    "visionText": "Convertirnos en la plataforma lider de automatizacion en Latinoamerica, reemplazando los modelos tradicionales de call centers y gestion manual.",
     "valuesTitle": "Nuestros Valores",
-    "value1Title": "Innovacion",
-    "value1Desc": "Incorporamos continuamente avances en inteligencia artificial y procesamiento de lenguaje natural para mantenernos a la vanguardia.",
-    "value2Title": "Empatia",
-    "value2Desc": "Diseñamos experiencias centradas en el usuario, priorizando la claridad, cercania y efectividad en cada interaccion.",
-    "value3Title": "Transparencia",
-    "value3Desc": "Brindamos visibilidad total sobre el funcionamiento de la plataforma y el uso de los datos.",
-    "value4Title": "Excelencia",
-    "value4Desc": "Buscamos resultados superiores en cada implementacion, optimizando continuamente el rendimiento del sistema.",
+    "value1Title": "Persistencia inteligente",
+    "value1Desc": "Insistimos mejor, no mas. Cada contacto esta optimizado.",
+    "value2Title": "Automatizacion real",
+    "value2Desc": "Reemplazamos procesos humanos, no los maquillamos.",
+    "value3Title": "Eficiencia extrema",
+    "value3Desc": "Reducimos costos operativos mientras aumentamos resultados.",
     "teamTitle": "Nuestro Equipo",
     "teamSubtitle": "Un equipo multidisciplinario enfocado en tecnologia, producto y experiencia del cliente.",
     "member1Name": "Santiago Collinet",

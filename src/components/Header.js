@@ -73,10 +73,10 @@ function Header() {
             href="https://deepcontact.com.ar/login"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-outline-light btn-sm me-3"
+            className="lang-toggle me-2 text-decoration-none"
             onClick={closeMenu}
           >
-            Login
+            <span className="lang-code">Login</span>
           </a>
           <div className="lang-dropdown" ref={dropdownRef}>
             <button
