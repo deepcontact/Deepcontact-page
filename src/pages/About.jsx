@@ -19,10 +19,10 @@ const TEAM = [
 function ValueCard({ emoji, title, desc }) {
   return (
     <div className="col-md-4">
-      <div className="card h-100 border-0 shadow-sm p-5 text-center">
-        <div className="mb-4"><span className="fs-1">{emoji}</span></div>
-        <h5 className="fw-bold mb-3">{title}</h5>
-        <p className="text-muted mb-0 lh-lg">{desc}</p>
+      <div className="card h-100 border-0 shadow-sm p-4 text-center">
+        <div className="mb-3"><span className="fs-1">{emoji}</span></div>
+        <h5 className="fw-bold">{title}</h5>
+        <p className="text-muted mb-0">{desc}</p>
       </div>
     </div>
   );
@@ -63,23 +63,23 @@ export default function About() {
       </section>
 
       {/* Misión & Visión */}
-      <section className="py-5 py-lg-6">
+      <section className="py-5">
         <div className="container">
           <div className="row g-5 align-items-start">
             <div className="col-md-6">
-              <h2 className="fw-bold mb-4">{t('about.missionTitle')}</h2>
-              <p className="text-muted fs-5 lh-lg">{t('about.missionText')}</p>
+              <h2 className="fw-bold mb-3">{t('about.missionTitle')}</h2>
+              <p className="text-muted fs-5">{t('about.missionText')}</p>
             </div>
             <div className="col-md-6">
-              <h2 className="fw-bold mb-4">{t('about.visionTitle')}</h2>
-              <p className="text-muted fs-5 lh-lg">{t('about.visionText')}</p>
+              <h2 className="fw-bold mb-3">{t('about.visionTitle')}</h2>
+              <p className="text-muted fs-5">{t('about.visionText')}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Valores */}
-      <section className="py-5 py-lg-6 bg-light">
+      <section className="py-5 bg-light">
         <div className="container">
           <h2 className="fw-bold text-center mb-5">{t('about.valuesTitle')}</h2>
           <div className="row g-4 justify-content-center">
