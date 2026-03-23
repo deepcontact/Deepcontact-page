@@ -3,6 +3,29 @@ import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import logo from '../assets/images/favicon-32x32.png';
 
+const getIP = async () => {
+  try {
+    const res = await fetch('https://api.ipify.org?format=json');
+    const json = await res.json();
+    return json.ip || null;
+  } catch {
+    return null;
+  }
+};
+
+const logSession = async ({ userId, success, ip }) => {
+  try {
+    await supabase.from('sessions_log').insert({
+      user_id:    userId || null,
+      event_type: success ? 'login_success' : 'login_failed',
+      success,
+      ip_address: ip,
+    });
+  } catch {
+    // silencioso, no interrumpir el flujo
+  }
+};
+
 export default function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
@@ -15,20 +38,24 @@ export default function Login() {
     setError('');
     setLoading(true);
 
+    const ip = await getIP();
+
     const { data, error: dbError } = await supabase
       .from('profiles')
       .select('*')
-      .eq('email', email)
-      .eq('password', password)
+      .eq('email', email.trim().toLowerCase())
+      .eq('password', password.trim())
       .limit(1);
 
     setLoading(false);
 
     if (dbError || !data || data.length === 0) {
+      await logSession({ userId: null, success: false, ip });
       setError('Email o contraseña incorrectos.');
       return;
     }
 
+    await logSession({ userId: data[0].id, success: true, ip });
     navigate('/backoffice');
   };
 
